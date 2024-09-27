@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML Example</title>
+    <style>
+        .thumbnail-container {
+            display: flex;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .full-image-container {
+            margin-top: 20px;
+        }
+
+        .full-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail-container">
+        <img class="thumbnail" src=".jpg" alt="Thumbnail 1">
+        <img class="thumbnail" src=".jpg" alt="Thumbnail 2">
+        <img class="thumbnail" src=".jpg" alt="Thumbnail 3">
+    </div>
+
+    <div class="full-image-container">
+        <img class="full-image" src="C:\Users\karan\Downloads.jpg" alt="Full Size Image">
+    </div>
+
+    <button id="change-image">Change Image</button>
+
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const fullImage = document.querySelector('.full-image');
+        const changeImageBtn = document.querySelector('#change-image');
+
+        changeImageBtn.addEventListener('click', function() {
+            // Change the source of the full-size image to a random thumbnail
+            const randomThumbnail = thumbnails[Math.floor(Math.random() * thumbnails.length)];
+            fullImage.src = randomThumbnail.src;
+        });
+    </script>
+</body>
+</html>

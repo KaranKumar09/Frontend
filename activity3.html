@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CDN Example</title>
+    <!-- Include jQuery library from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Add custom styles here */
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML elements with name attributes -->
+    <p name="paragraph">Initial content</p>
+    <input type="text" name="inputField" value="Initial value">
+    <button name="submitButton">Submit</button>
+
+    <!-- Output area for updated content -->
+    <div id="output"></div>
+
+    <script>
+        // Main function to initialize the page
+        $(document).ready(function() {
+            // Apply jQuery selectors with name attributes
+            var $paragraph = $("[name='paragraph']");
+            var $inputField = $("[name='inputField']");
+            var $submitButton = $("[name='submitButton']");
+
+            // Manipulate content and attributes
+            $paragraph.text("Updated content");
+            $inputField.attr("placeholder", "Enter your text");
+            $submitButton.addClass("btn-primary");
+
+            // Update HTML elements with JSON data
+            var jsonData = {
+                "name": "John Doe",
+                "age": 30,
+                "city": "New York"
+            };
+            updateParagraph(jsonData);
+
+            // Display CDN link for jQuery
+            appendCDNLink();
+
+            // Function to handle button click
+            $submitButton.on("click", function() {
+                updateOutput();
+            });
+
+            // Function to update paragraph with JSON data
+            function updateParagraph(data) {
+                $paragraph.text("Name: " + data.name + ", Age: " + data.age + ", City: " + data.city);
+            }
+
+            // Function to append CDN link to the body
+            function appendCDNLink() {
+                var cdnLink = $("<a>").attr("href", "https://code.jquery.com/jquery-3.6.0.min.js").text("jQuery CDN Link");
+                $("body").append(cdnLink);
+            }
+
+            // Function to update output area with input field value
+            function updateOutput() {
+                var inputValue = $inputField.val();
+                $("#output").text("Input value: " + inputValue);
+            }
+        });
+    </script>
+</body>
+</html>

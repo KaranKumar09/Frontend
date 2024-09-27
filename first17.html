@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var personData={
+            "person":{
+                "Name":"John Doe", 
+                "Age":32,
+                "Address":{
+                    "city":"Jalandhar",
+                    "zipcode":"10001"
+                },
+                "contacts":[
+                {
+                    "type":"email",
+                    "value":"john@gmail.com"
+                },
+                {
+                    "type":"phone",
+                    "value":"976543210"
+                }
+
+            ]
+        }
+    };
+
+        var jsonString = JSON.stringify(personData);
+        document.getElementById("abc").innerHTML=jsonString;
+    </script>
+</body>
+</html>

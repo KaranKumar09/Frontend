@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+            border: 5px solid red;
+        }
+        .ele{
+            border: 20px solid;
+            padding: 50px;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>  
+    <div id="outermost" class="ele">
+        <div id="inner" class="ele">
+            <div id="innermost" class="ele"></div>
+    </div>
+    </div>
+    <script>
+            innermost.addEventListener("mouseover",function(){
+                this.style.borderColor = "red";
+                this.style.transform = 'rotate(360deg)';
+                this.style.transition = '2s'
+            });
+            inner.addEventListener("mouseover",function(){
+                this.style.borderColor = "green";
+                this.style.transform = 'rotate(360deg)';
+                this.style.transition = '2s'
+            });
+            innermost.addEventListener("mouseover",function(){
+                this.style.borderColor = "blue";
+                this.style.transform = 'rotate(360deg)';
+                this.style.transition = '2s'
+            });
+        </script>
+</body>
+</html> -->
+<html>
+<head>
+    <style>
+        .ele{
+            border: 20px solid;
+            padding: 50px;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outermost" class="ele">
+        <div id="inner" class="ele">
+            <div id="innermost" class="ele"></div>
+        </div>
+    </div>
+    <script>
+        innermost.addEventListener("mouseover", function(){
+            this.style.borderColor = "red";
+            this.style.transform = "rotate(100turn)";
+            this.style.transition = "1s";
+        });
+        inner.addEventListener("mouseover", function(){
+            this.style.borderColor = "green";
+            this.style.transform = "rotate(100turn)";
+            this.style.transition = "3s";
+        });
+        outermost.addEventListener("mouseover", function(){
+            this.style.borderColor = "blue";
+            this.style.transform = "rotate(100turn)";
+            this.style.transition = "5s";
+        });
+        
+    </script>
+</body>
+</html>w

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Health Goals</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		input[type=text] {
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 10%;
+		}
+		.result {
+			margin: 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<h2>Health Goals</h2>
+	<input type="text" id="goal" placeholder="Enter your health goal">
+	<button onclick="setGoal()">Set Goal</button>
+	<div class="result"></div>
+
+	<script>
+		function setGoal() {
+			const goal = document.getElementById("goal").value;
+			const resultDiv = document.getElementsByClassName("result")[0];
+			resultDiv.innerText = `Your health goal is: ${goal}`;
+		}

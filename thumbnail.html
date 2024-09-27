@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgStyle{
+            width: 150px;
+            height: 100px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImage" style="border: 5px solid grey" src="C:\Users\KALYAN\Desktop\INT-219\Unit-2\images\image1.jpg" height="500px" width="540px">
+    <br>
+    <div id="divId" onclick="changeImageOnClick()" onmouseover="f1()" onmouseout="f2()">
+        <img id="1" class="imgStyle" src="C:\Users\KALYAN\Desktop\INT-219\Unit-2\images\image1.jpg">
+        <img id="2" class="imgStyle" src="C:\Users\KALYAN\Desktop\INT-219\Unit-2\images\image2.jpg">
+        <img id="3" class="imgStyle" src="C:\Users\KALYAN\Desktop\INT-219\Unit-2\images\image3.jpg">
+        
+    </div>
+    <script type="text/JavaScript">
+        function changeImageOnClick(){
+            var x = event.target;
+            if(x.tagName=="IMG"){
+                a=x.getAttribute("src");
+                document.getElementById("mainImage").setAttribute("src",a);
+            }
+        }
+        function f1(){
+            x=event.target;
+            x.style.cursor = 'pointer';
+            x.style.borderColor = 'red';
+        }
+        function f2(){
+            x.event.target.style.borderColor = 'grey';
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .imageStyle{
+            width : 100px ; 
+            height:  100px ;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>  
+    <img src="Araku Valley.jpg" style="border: 3px solid grey;" alt="" id="mainUmage" height="500px" width="540px"> <br>
+
+    <div id="divId" onclick="ChangeImageOnClick()" onmouseover="f1()" onmouseout="f2()">
+
+        
+        <img src="Araku Valley.jpg" alt="" id="1" class="imageStyle">
+        <img src="Araku Valley.jpg" alt="" id="2" class="imageStyle">
+        <img src="Araku Valley.jpg" alt="" id="3" class="imageStyle">
+        <img src="Araku Valley.jpg" alt="" id="4" class="imageStyle">
+        <img src="Araku Valley.jpg" alt="" id="5" class="imageStyle">
+        
+    </div>
+
+    <script type="text/javascript">
+        function ChangeImageOnClick(){
+            var x = event .target ; 
+            if (x.tagName=="IMG"){
+                a = x. getAttributr("src");
+                document.getElementById("maminImage").setAttribute("src" , a );
+            }
+        }
+
+
+        function f1(){
+            x= event . target ; 
+            x.style .cursor = pointer = 'pointer '; 
+            x.style . bore=derColor = 'red ';
+
+        }
+
+        function f2(){
+            x = event .target .style .borderColor = 'grey' ;
+        }
+    </script>
+</body>
+</html>

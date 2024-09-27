@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+</head>
+
+<body onresize="fun()">
+    <h3>this is the examole of using onresize function</h3>
+
+    <p>try to resize the browser's wimdon to see effect</p>
+    <p id="para"></p>
+    <p>You have resized the window <span id="s1">2</span> times</p>
+
+    <p>example of the addEventListener() method</p>
+    <p>click the following button to see the effect</p>
+    <script>
+        var i = 0;
+        function fun() {
+            var res =
+                "width = " +
+                window.outerWidth +
+                "<br>" +
+                "Height = " +
+                window.outerHeight;
+            document.getElementById("para").innerHTML = res;
+            var res1 = (i += 1);
+            document.getElementById("s1").innerHTML = res1;
+        }
+    </script>
+    <!-- <button id="btn">Click me</button>
+    <p id="para"></p>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",fun);
+        function fun(){
+            document.getElementById("para").innerHTML = "Hello World"+ "<br>" + "Welcome to lpu";
+        }
+    </script> -->
+</body>
+
+</html>

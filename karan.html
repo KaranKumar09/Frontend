@@ -1,0 +1,48 @@
+1<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" autocomplete required>
+        <input type="button" onclick="handleSubmit()" value="submit">
+    </form>
+    
+</body>
+<script>
+    function handleSubmit(){
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        
+        if (name == "" || email == "" || password == ""){
+            alert("Please fill all the fields");
+        }
+
+        // check only cantaiin letters in name
+        else if (!/^[a-zA-Z]+$/.test(name)){
+            alert("Name should only contain letters");
+        }
+
+        else if (password.length < 8){
+            alert("Password should be atleast 8 characters long");
+        }
+        else{
+            console.log("form submitted");
+            setTimeout(() => {
+                alert("Form submitted successfully");
+                
+            }, 2000);
+        }
+
+    }
+</script>
+</html>

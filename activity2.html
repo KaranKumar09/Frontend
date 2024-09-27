@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+    <style>
+        #mydiv{
+            margin-top: 10px;
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+        }
+
+        #content{
+            height: 2000px;
+            width: 2000px;
+            padding: 10px;
+            background-color: blue;
+        }
+        </style>
+<body>
+    <h1>Activity</h1>
+    <div id="mydiv">
+        <div id="content">
+            <img src="C:\Users\karan\Downloads.jpeg">
+        </div>
+
+    </div>
+    <p id="mypara"></p>
+
+    <script>
+        var element=document.getElementById("content");
+        let y=element.scrollHeight;
+        let x=element.scrollWidth;
+
+        document.getElementById("mypara").innerHTML="height: "+y+" width: "+x;
+=
+    </script>
+    
+</body>
+</html>

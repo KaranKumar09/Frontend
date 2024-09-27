@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript">
+        var img = null;
+        function init(){
+            img = document.getElementById("myimp");
+            img.style.position = "relative";
+            img.style.left = "50px";
+        }
+        function moveright(){
+            img.style.left = parseInt(img.style.left)+100 + "px";
+        }
+        function moverleft(){
+            img.style.left = parseInt(img.style.left)-100 + "px";
+        }
+        window.onload = init;
+         
+    </script>
+</head>
+<body>
+    <form >
+        <img src="image1.jpg" alt="djh" id="myimp"/>
+        <center>
+            <p>click the below button to move the image right</p>
+            <input type="button" value="Click Me" onclick="moveright();"/>
+            <p>
+                click the below to mve left 
+            </p>
+            <input type="button" value="Click Me" onclick="moverleft();"/>
+        </center>
+    </form>
+    
+</body>
+</html>

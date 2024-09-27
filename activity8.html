@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planner Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+</head>
+<body>
+  <h1>Planner Quiz</h1>
+
+  <form id="quizForm">
+    <h3>1)
+    What is Bootstrap?</h3>
+    <input type="radio" name="q1" value="a"> A JavaScript library<br>
+    <input type="radio" name="q1" value="b"> A CSS framework<br>
+    <input type="radio" name="q1" value="c"> A programming language<br>
+
+    <h3>2)
+    How do you include Bootstrap in your HTML file?</h3>
+    <input type="radio" name="q2" value="a"> Using a CDN<br>
+    <input type="radio" name="q2" value="b"> Downloading and linking the CSS file<br>
+    <input type="radio" name="q2" value="c"> Importing it with a package manager<br>
+
+    <h3>3)
+    What is typography in web design?</h3>
+    <input type="radio" name="q3" value="a"> The art of arranging text on a web page<br>
+    <input type="radio" name="q3" value="b"> The study of fonts and typefaces<br>
+    <input type="radio" name="q3" value="c"> The process of adding images to text<br>
+
+    <h3>4)
+    What is responsive web design?</h3>
+    <input type="radio" name="q4" value="a"> Designing websites for mobile devices<br>
+    <input type="radio" name="q4" value="b"> Creating websites that adapt to different screen sizes<br>
+    <input type="radio" name="q4" value="c"> Optimizing websites for search engines<br>
+
+    <h3>5)
+    What is the purpose of CSS media queries?</h3>
+    <input type="radio" name="q5" value="a"> To apply different styles based on the device's screen size<br>
+    <input type="radio" name="q5" value="b"> To add interactivity to web pages<br>
+    <input type="radio" name="q5" value="c"> To define the structure and layout of a web page<br>
+
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="score" class="score"></div>
+  <div id="retryButton" class="retry-button" style="display: none;">
+    <button onclick="location.reload()">Retry</button>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("quizForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var score = 0;
+      var answers = {
+        q1: "b",
+        q2: "a",
+        q3: "a",
+        q4: "b",
+        q5: "a"
+      };
+
+      for (var i = 1; i <= 5; i++) {
+        var question = "q" + i;
+        var selectedOption = document.querySelector('input[name="' + question + '"]:checked');
+        if (selectedOption && selectedOption.value === answers[question]) {
+          score++;
+        }
+      }
+
+      document.getElementById("quizForm").style.display = "none";
+      document.getElementById("score").textContent = "Your score: " + score + "/5";
+      document.getElementById("retryButton").style.display = "block";
+    });
+  </script>
+</body>
+</html>

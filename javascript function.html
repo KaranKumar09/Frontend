@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="add()">
+    <script>
+        var i=Number(prompt("Enter your number"));
+        var j=Number(prompt("Enter your number"));
+        function add(){
+            document.write("the sum is : ",(i+j));
+        }    
+    </script>
+</body>
+</html>q -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Example of the addEvent listner</p>
+    <p> click the following button to see the effect.</p>
+    <button id="btn">
+        click me.
+    </button>
+    <p id="para"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click",fun);
+        function fun(){
+            document.getElementById("para").innerHTML="Hello world" + "<br" + "welcome to lpu."
+        }
+    </script>
+</body>
+</html>

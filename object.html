@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            firstName:"Jhon",
+            lastName:"Doe",
+        }
+    </script>
+</body>
+ </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            width: 10rem;
+            height: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn" name="change" value="change me">
+
+    <script>
+        let colorChange = true;
+        function changeMe(){
+            this.style.background = colorChange ? "red" : "green";
+            colorChange = !colorChange;
+        }
+        const btn = document.querySelector('#btn');
+        document.body.addEventListener('mouseover',changeMe);
+        document.body.addEventListener('mouseout',changeMe);
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="hover" id="btn">
+    <script type="text/javascript">
+        btn.addEventListener("mouseover",changeColorOnMouseOver);
+        btn.addEventListener("mouseout",changeColorOnMouseOut);
+        function changeColorOnMouseOver(){
+            this.style.background="red";
+            this.style.color="yellow";
+        }
+        function changeColorOnMouseOut(){
+            this.style.background="cadetblue";
+            this.style.color="white";
+        }
+    </script>
+</body>
+</html>
